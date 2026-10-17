@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Run();   
+        Run();
+        FlipSrite();
     }
 
     void OnMove(InputValue value)
@@ -30,5 +31,14 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, myRigidbody.linearVelocity.y);
         myRigidbody.linearVelocity = playerVelocity;
 
+    }
+
+    void FlipSrite()
+    {
+        bool hasHorizontalSpeed = Mathf.Abs(myRigidbody.linearVelocity.x) > Mathf.Epsilon;
+        if(hasHorizontalSpeed)
+        {
+        transform.localScale = new Vector2(Mathf.Sign(myRigidbody.linearVelocity.x), 1f);
+        }
     }
 }
