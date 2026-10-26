@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     bool isAlive = true;
+    Animator myAnimator;
 
     
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         feetCollider = GetComponent<BoxCollider2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, myRigidbody.linearVelocity.y);
         myRigidbody.linearVelocity = playerVelocity;
+        bool hasHorizontalSpeed = Mathf.Abs(myRigidbody.linearVelocity.x) > Mathf.Epsilon;
+        myAnimator.SetBool("isRunning", hasHorizontalSpeed);
 
     }
 
