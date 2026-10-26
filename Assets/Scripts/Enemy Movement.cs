@@ -19,13 +19,22 @@ public class EnemyMovement : MonoBehaviour
             moveSpeed,
             enemyRididbody.linearVelocity.y);
     }
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Enemy_Turning_Barrier"))
+        {
+            ChangeDirection();
+        }
+    }
+
+    void ChangeDirection()
     {
         moveSpeed = -moveSpeed;
 
-        transform.localScale = new Vector2(
-            -transform.localScale.x,
-            transform.localScale.y);
+            transform.localScale = new Vector2(
+                -transform.localScale.x,
+                transform.localScale.y);
+                Debug.Log("Exit Trigger");
     }
 
     void OnCollisionEnter2D(Collision2D collision)
