@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 951648712}
   - component: {fileID: 951648711}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: Follow camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17723,11 +17723,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 708868257}
+  - {fileID: 951648713}
   - {fileID: 1530319660}
   - {fileID: 626574165931321263}
   - {fileID: 1836527846}
   - {fileID: 1777060412}
-  - {fileID: 951648713}
   - {fileID: 2144074993}
   - {fileID: 86523227}
   - {fileID: 2042712669}
