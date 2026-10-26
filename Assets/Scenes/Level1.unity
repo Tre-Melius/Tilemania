@@ -1132,7 +1132,7 @@ Transform:
   m_GameObject: {fileID: 708868254}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.05, y: 19.3327, z: -10}
+  m_LocalPosition: {x: 1.7274656, y: 2.2625103, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1225,6 +1225,7 @@ GameObject:
   - component: {fileID: 951648713}
   - component: {fileID: 951648712}
   - component: {fileID: 951648711}
+  - component: {fileID: 951648714}
   m_Layer: 0
   m_Name: Follow camera
   m_TagString: Untagged
@@ -1309,6 +1310,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951648714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951648710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineConfiner2D
+  BoundingShape2D: {fileID: 2064223748}
+  Damping: 0.5
+  SlowingDistance: 5
+  OversizeWindow:
+    Enabled: 0
+    MaxWindowSize: 0
+    Padding: 0
+  m_LegacyMaxWindowSize: -2
 --- !u!4 &1501679648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884193598105502971, guid: 371899071f44e35408ee25befe897959, type: 3}
@@ -4455,7 +4476,8 @@ GameObject:
   - component: {fileID: 2064223746}
   - component: {fileID: 2064223745}
   - component: {fileID: 2064223747}
-  m_Layer: 0
+  - component: {fileID: 2064223748}
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17616,6 +17638,60 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &2064223748
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064223743}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 14.387377, y: 21.766241}
+      - {x: -10.809557, y: 21.591948}
+      - {x: -8.164236, y: 9.170005}
+      - {x: -11.431274, y: -13.798376}
+      - {x: 1.8449209, y: -17.24121}
+      - {x: 14.431278, y: -13.798372}
+      - {x: 14.886225, y: 7.8673115}
+  m_UseDelaunayMesh: 1
 --- !u!1 &2144074992
 GameObject:
   m_ObjectHideFlags: 0
@@ -17708,6 +17784,10 @@ PrefabInstance:
     - target: {fileID: 5081682299731526700, guid: 371899071f44e35408ee25befe897959, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081682299731526700, guid: 371899071f44e35408ee25befe897959, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5081682299731526700, guid: 371899071f44e35408ee25befe897959, type: 3}
       propertyPath: m_TagString
