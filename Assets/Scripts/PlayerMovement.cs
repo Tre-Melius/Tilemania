@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float jumpHeight = 5f;
+    [SerializeField] float climbSpeed = 5f;
 
     BoxCollider2D feetCollider;
     Vector2 moveInput;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Run();
         FlipSrite();
+        ClimbLadder();
     }
 
     public void OnMove(InputValue value)
@@ -74,5 +76,11 @@ public class PlayerMovement : MonoBehaviour
             isAlive = false;
             Debug.Log("player is dead");
         }
+    }
+    void ClimbLadder()
+    {
+        if(!feetCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) { return; }
+        Vector2 climbVelocity = new Vector2 (myRigidbody.linearVelocity.x, moveInput.y * climbSpeed);
+        myRigidbody.linearVelocity = climbVelocity;
     }
 }
