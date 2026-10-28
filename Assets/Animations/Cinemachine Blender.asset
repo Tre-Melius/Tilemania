@@ -35,7 +35,7 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - From: Idle Camera
+  - From: '**ANY CAMERA**'
     To: Ladder Camera
     Blend:
       Style: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
         m_PostInfinity: 0
         m_RotationOrder: 0
   - From: Ladder Camera
-    To: Idle Camera
+    To: '**ANY CAMERA**'
     Blend:
       Style: 1
       Time: 0
