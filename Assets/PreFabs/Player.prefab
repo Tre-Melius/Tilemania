@@ -84,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -645194119
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1857188551261513057, guid: 408c8c43549c4a34d87c0538df08987e, type: 3}
@@ -145,7 +145,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &5761435671432202726
 CapsuleCollider2D:
@@ -229,6 +229,7 @@ MonoBehaviour:
   moveSpeed: 10
   jumpHeight: 5
   climbSpeed: 5
+  deathKick: {x: 10, y: 20}
 --- !u!61 &1666415079566343729
 BoxCollider2D:
   m_ObjectHideFlags: 0
