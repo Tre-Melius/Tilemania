@@ -35,7 +35,8 @@ Transform:
   m_LocalPosition: {x: -4.97, y: 18.59, z: 0}
   m_LocalScale: {x: 1, y: 0.9746, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 9149438718605494563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3926154576408113166
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -645194119
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1857188551261513057, guid: 408c8c43549c4a34d87c0538df08987e, type: 3}
@@ -230,6 +231,8 @@ MonoBehaviour:
   jumpHeight: 5
   climbSpeed: 5
   deathKick: {x: 10, y: 20}
+  Bullet: {fileID: 0}
+  gun: {fileID: 9149438718605494563}
 --- !u!61 &1666415079566343729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,3 +279,34 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.34469604, y: 0.20217526}
   m_EdgeRadius: 0
+--- !u!1 &5115021570568042407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9149438718605494563}
+  m_Layer: 8
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9149438718605494563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5115021570568042407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.253, y: -0.167, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2884193598105502971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
